@@ -25,11 +25,20 @@ VALUES ('$email', '$user_name','$passwo')";
 
 if ($conn->multi_query($sql) === TRUE) {
    $last_id=$conn->insert_id;
+   
+   $subject="hello";
+   $body="creation successful";
+   $headers="From: shivam@co";
+
+   if(mail($email,$subject,$body,$headers)){
+       echo" success";
+   }
     echo "New record created successfully Recorded id is: ".$last_id." ".$user_name;
     
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
+
 
 $conn->close(); 
 ?>
