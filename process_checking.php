@@ -48,11 +48,13 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
+//$row['passwo']==$user_password
+//if(password_verify($password, $hashed_password))
 $linkadd1='http://localhost/phpmyadmin/phplessons/2ndsqlinj/updatepass.php';
 $linkadd2='http://localhost/phpmyadmin/phplessons/iip/display.php';
-$result = $conn->query("select * from users_blog2 where user_name='$uname'and passwo='$user_password'");
+$result = $conn->query("select * from users_blog2 where user_name='$uname'"); // and passwo= password_verify($user_password,$passwo)");
 $row =  $result->fetch_assoc();
-if($row['user_name']==$uname && $row['passwo']==$user_password){
+if($row['user_name']==$uname && password_verify($user_password,$row['passwo']) ){
 echo "<a href='".$linkadd1."'>CLICK HERE TO UPADTE YOUR PASSWORD </a>";
 echo "</br>";
 echo "</br>";

@@ -2,7 +2,7 @@
 $email=$_GET["email"];
 $user_name=$_GET["user_name"];
 $passwo=$_GET["passwo"];
-
+$passwo = password_hash($passwo,PASSWORD_BCRYPT);
 function val($data) {
 	$data = trim($data);
 	$data = stripslashes($data);
