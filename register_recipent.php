@@ -70,7 +70,7 @@ if ($conn->connect_error) {
 
 $sql = "INSERT INTO users (firstname, lastname,contactNumber,occupation,need,Adhar,Income,About)
 VALUES ('$fname', '$lname','$con_number','$occu','$need','$target_file1','$target_file2','$about')";
-if ($conn->multi_query($sql) === TRUE) {
+/*if ($conn->multi_query($sql) === TRUE) {
    $last_id=$conn->insert_id;
     echo "New record created successfully Recorded id is: ".$last_id;
     // the message
@@ -87,7 +87,7 @@ if ($conn->multi_query($sql) === TRUE) {
 
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
-}
+}*/
 $conn->close(); 
 }
 ?>
