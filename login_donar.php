@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>LOGIN</title>
@@ -32,6 +31,10 @@ tr:hover{
 <form action="process_checking.php" method="get">
 <div align="middle">
 <h1> LOGIN </h1>
+
+<div>
+  <p class="success"><?php echo $_SESSION['msg']; ?> </p>
+</div>
 <table width="600" border="5" cellspacing="2" cellpadding="6" padding="50">
   <tr>
     <td>USERNAME:</td>
