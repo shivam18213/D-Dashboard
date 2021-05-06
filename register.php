@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CREATING NEW DONAR </title>
+</head>
+<style>
+    </style>
+<body>    
 <?php
 $email=$_GET["email"];
 $user_name=$_GET["user_name"];
@@ -22,14 +30,14 @@ $dbname = "blog2";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+} echo "<p style='color:red;'>" . $ip['countryName'] . "</p>";
 
 $emailquery= "SELECT * FROM users_blog2 WHERE email='$email' ";
 $mysqli_result= $conn->query($emailquery);
 
 $emailcount= mysqli_num_rows($mysqli_result);
 if($emailcount > 0){
-    echo "email already exists reload and try again";
+    echo "<p stryle= 'color:red;'> email already exists reload and try again </p>";
     $conn->close();
 }
 
@@ -60,3 +68,6 @@ if ($conn->multi_query($sql) === TRUE) {
 
 $conn->close(); 
 ?>
+
+</body>
+</html>
