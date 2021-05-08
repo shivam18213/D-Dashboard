@@ -50,7 +50,8 @@ if ($conn->connect_error) {
 } 
 $linkadd1='http://localhost/phpmyadmin/phplessons/iip/updatepass.php';
 $linkadd2='http://localhost/phpmyadmin/phplessons/delete.php';
-$linkadd3='http://localhost/phpmyadmin/phplessons/iip/chat_system/index.php';
+$linkadd3='http://127.0.0.1:5000';
+$linkadd4='http://127.0.0.1:4000';
 $result = $conn->query("select * from users_blog2 where user_name='$uname'and passwo='$user_password'");
 $row =  $result->fetch_assoc();
 if($row['user_name']==$uname && $row['passwo']==$user_password){
@@ -61,6 +62,8 @@ echo "</br>";
 echo "<a href='".$linkadd2."'>CLICK HERE TO VIEW THE LIST OF RECIPENTS</a>";
 echo "</br>";
 echo "<a href='".$linkadd3."'>CLICK HERE TO CHAT</a>";
+echo "</br>"
+echo "<a href='".$linkadd4."'>CHECK OUT OUR OTHER PRODUCTS</a>";
 }
 $conn->close(); 
 
