@@ -62,7 +62,7 @@ echo "</br>";
 echo "<a href='".$linkadd2."'>CLICK HERE TO VIEW THE LIST OF RECIPENTS</a>";
 echo "</br>";
 echo "<a href='".$linkadd3."'>CLICK HERE TO CHAT</a>";
-echo "</br>"
+echo "</br>";
 echo "<a href='".$linkadd4."'>CHECK OUT OUR OTHER PRODUCTS</a>";
 }
 $conn->close(); 
