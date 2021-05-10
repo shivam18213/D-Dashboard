@@ -51,10 +51,10 @@ if ($conn->connect_error) {
 $linkadd1='http://localhost/phpmyadmin/phplessons/iip/updatepass.php';
 $linkadd2='http://localhost/phpmyadmin/phplessons/delete.php';
 $linkadd3='http://127.0.0.1:5000';
-$linkadd4='http://127.0.0.1:4000';
-$result = $conn->query("select * from users_blog2 where user_name='$uname'and passwo='$user_password'");
-$row =  $result->fetch_assoc();
-if($row['user_name']==$uname && $row['passwo']==$user_password){
+$linkadd4='http://127.0.0.1:4000'; 
+$result = $conn->query("select * from users_blog2 where user_name='$uname'and Status='Active'");
+$row =  $result->fetch_assoc(); 
+if($row['user_name']==$uname && password_verify($user_password,$row['passwo']) ){
 echo "";
 echo "<a href='".$linkadd1."'>CLICK HERE TO UPDATE PASSWORD</a>";
 echo "</br>";
