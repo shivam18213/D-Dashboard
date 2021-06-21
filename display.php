@@ -28,7 +28,7 @@ tr:hover{
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "Shivam@18213";
+$password = "";
 $dbname = "regestration";
 
 // Create connection
