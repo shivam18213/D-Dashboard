@@ -24,7 +24,7 @@ function val($data) {
 
 $servername = "localhost";
 $username = "root";
-$password = "Shivam@18213";
+$password = "";
 $dbname = "blog2";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
