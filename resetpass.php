@@ -12,7 +12,7 @@ function val($data) {
 
 $servername = "localhost";
 $username = "root";
-$password = "Shivam@18213";
+$password = "";
 $dbname = "blog2";
 
 // Create connection
