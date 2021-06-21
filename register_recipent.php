@@ -58,7 +58,7 @@ if($uploadOk == 1){
 
 $servername = "localhost";
 $username = "root";
-$password = "Shivam@18213";
+$password = "";
 $dbname = "regestration";
 
 
